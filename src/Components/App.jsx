@@ -1,3 +1,4 @@
+import { Buttons } from "./Buttons"
 
 
 
@@ -7,13 +8,16 @@ function App() {
   return (
 
     <>
-      <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand " href="#">
-            Calculadora
-          </a>
-        </div>
-      </nav>      
+    <nav>
+      <ul class="nav justify-content-center bg-dark">
+        <li class="nav-item">
+          <a class="nav-link active fs-2" aria-current="page" href="#">Calculadora</a>
+        </li>
+      </ul>
+    </nav>
+
+    <Buttons/>
+
     </>
   )
 }

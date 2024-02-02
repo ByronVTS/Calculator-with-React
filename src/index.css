@@ -1,5 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body{
   /* padding: 20px; */
   /* background-color: rgb(39, 42, 44); */
   /* color: darkcyan; */
+}
+
+
+.areaNumbers{
+  width: 300px;
+}
+
+.areOperations{
+  width: 200px;
+}
+.areaResults{
+  width: 400px;
+}
+
+.areaButtons{
+  width: 550px;
+}
+
+.buttonMas{
+  height: 100px;
 }
