@@ -5,10 +5,14 @@
 
 body{
   /* padding: 20px; */
-  /* background-color: rgb(39, 42, 44); */
+  background-color: rgb(39, 42, 44);
   /* color: darkcyan; */
 }
 
+.dark-mode {
+  background-color: rgb(39, 42, 44);
+  /* color: #fff; */
+}
 
 .areaNumbers{
   width: 300px;
