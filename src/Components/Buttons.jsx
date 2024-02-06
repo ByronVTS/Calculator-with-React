@@ -8,6 +8,7 @@ export const Buttons = () => {
 
           displayResult,
           resultInput,
+        //   result,
           handleButtonClick,
           handleDelete,
           handleResetValue,
@@ -68,7 +69,9 @@ export const Buttons = () => {
                         </button>
                         <button 
                             className='col m-2 btn btn-outline-success'
-                            onClick={() => handleResult()}
+                            onClick={() => {
+                                handleResult();
+                                }}
                         >   =
                         </button>
                     </div>
