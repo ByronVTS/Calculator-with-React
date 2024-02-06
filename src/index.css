@@ -18,6 +18,9 @@ body{
   width: 300px;
 }
 
+.areaLog{
+  width: 400px;
+}
 .areOperations{
   width: 200px;
 }
@@ -26,7 +29,7 @@ body{
 }
 
 .areaButtons{
-  width: 550px;
+  /* width: 1050px; */
 }
 
 .buttonMas{

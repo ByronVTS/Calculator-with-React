@@ -8,7 +8,7 @@ export const Buttons = () => {
 
           displayResult,
           resultInput,
-        //   result,
+          registroEntries,
           handleButtonClick,
           handleDelete,
           handleResetValue,
@@ -24,19 +24,32 @@ export const Buttons = () => {
                         type="text" 
                         className="form-control m-2" 
                         placeholder="Values"
-                        value={displayResult}
+                        defaultValue={displayResult}
                         readOnly
-                         />
+                    />
                     <input 
                         type="text" 
                         className="form-control m-2" 
                         placeholder="Results"
-                        value={resultInput} />
+                        value={resultInput}
+                        onChange={(e) => {}}
+                    />
                 </div>
             </div>
 
             <div className='areaButtons d-flex justify-content-center container text-center'>
             
+                <div className='areaLog container text-center'>
+                    <p>Registro de operaciones</p>
+                    <ul className='text-start'>
+                    {registroEntries.map(({ value, result }, index) => (
+                        <li key={index}>
+                        {value} = {result}
+                        </li>
+                    ))}
+                    </ul>
+                </div>
+
                 <div className='areaNumbers  container text-center'>
                     <CreateButtons handleNumberClick={handleButtonClick} numbers={[1,2,3]}/>
                     <CreateButtons handleNumberClick={handleButtonClick} numbers={[4,5,6]}/>
@@ -77,6 +90,8 @@ export const Buttons = () => {
                     </div>
                 </div>
             </div>
+
+            
 
             
         </>

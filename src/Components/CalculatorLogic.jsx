@@ -11,10 +11,8 @@ export const CalculatorLogic = () => {
     setOperationsLogs(storedOperations);
   }, []);
 
-
   useEffect( () => {
     localStorage.setItem('registroDeOperaciones', JSON.stringify(operationsLogs))
-    console.log(operationsLogs);
   },[operationsLogs])
 
 
@@ -42,8 +40,6 @@ export const CalculatorLogic = () => {
       const expression = valuesInput.join('');
       const result = eval(expression);
       setResultInput(result);
-      console.log(resultInput);
-      console.log(result);
       handleDatesChange(displayResult,result)
     } catch (error) {
       setResultInput('Error');
@@ -68,10 +64,22 @@ export const CalculatorLogic = () => {
     setDisplayResult(expression);
   }, [valuesInput]);
 
+  const [registroEntries, setRegistroEntries] = useState([])
+
+       useEffect(() => {
+        // Actualizar el estado con los objetos que contienen solo 'value' y 'result'
+        const newRegistroEntries = Object.values(operationsLogs).map(({ value, result }) => ({
+          value,
+          result,
+        }));
+        setRegistroEntries(newRegistroEntries);
+      }, [operationsLogs]);
+
   return {
     displayResult,
     resultInput,
-    // result,
+    operationsLogs,
+    registroEntries,
     handleButtonClick,
     handleDelete,
     handleResetValue,
