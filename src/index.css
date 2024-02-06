@@ -19,7 +19,7 @@ body{
 }
 
 .areaLog{
-  width: 400px;
+  width: 500px;
 }
 .areOperations{
   width: 200px;
@@ -34,4 +34,7 @@ body{
 
 .buttonMas{
   height: 100px;
+}
+.text-white {
+  color: white;
 }
